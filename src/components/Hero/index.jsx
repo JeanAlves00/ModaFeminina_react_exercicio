@@ -1,7 +1,7 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "./styles.css";
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import './styles.css'
 
 const Hero = () => {
   // Configurações do carousel
@@ -14,7 +14,7 @@ const Hero = () => {
     autoplay: true, // Rola automaticamente
     autoplaySpeed: 3000, // Tempo entre os slides (ms)
     arrows: false, // Remove setas laterais
-  };
+  }
 
   return (
     <section id="novidades" className="hero">
@@ -39,7 +39,7 @@ const Hero = () => {
         </div>
       </Slider>
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

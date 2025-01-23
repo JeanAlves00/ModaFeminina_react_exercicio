@@ -1,26 +1,26 @@
-import React, { useState } from "react";
-import "./styles.css";
+import React, { useState } from 'react'
+import './styles.css'
 
 const ContactTab = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+    name: '',
+    email: '',
+    message: '',
+  })
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
-    }));
-  };
+    }))
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Formulário enviado:", formData);
-    alert("Mensagem enviada com sucesso!");
-  };
+    e.preventDefault()
+    console.log('Formulário enviado:', formData)
+    alert('Mensagem enviada com sucesso!')
+  }
 
   return (
     <div className="contact-tab">
@@ -66,7 +66,7 @@ const ContactTab = () => {
         </button>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default ContactTab;
+export default ContactTab

@@ -1,42 +1,84 @@
-import { useState } from "react";
-import "./styles.css";
+import { useState } from 'react'
+import './styles.css'
 
 const CategoriesTab = () => {
-  const [activeTab, setActiveTab] = useState(1); // Estado para controlar a aba ativa
+  const [activeTab, setActiveTab] = useState(1)
 
   const categories = [
     {
       id: 1,
-      name: "Vestidos",
+      name: 'Vestidos',
       products: [
-        { id: "1-1", name: "Vestido Floral", image: "https://placehold.co/400x600/FFB6C1/000000?text=Vestido+Floral" },
-        { id: "1-2", name: "Vestido Casual", image: "https://placehold.co/400x600/FFC0CB/000000?text=Vestido+Casual" },
-        { id: "1-3", name: "Vestido Elegante", image: "https://placehold.co/400x600/FF69B4/000000?text=Vestido+Elegante" },
+        {
+          id: '1-1',
+          name: 'Vestido Floral',
+          image:
+            'https://placehold.co/400x600/FFB6C1/000000?text=Vestido+Floral',
+        },
+        {
+          id: '1-2',
+          name: 'Vestido Casual',
+          image:
+            'https://placehold.co/400x600/FFC0CB/000000?text=Vestido+Casual',
+        },
+        {
+          id: '1-3',
+          name: 'Vestido Elegante',
+          image:
+            'https://placehold.co/400x600/FF69B4/000000?text=Vestido+Elegante',
+        },
       ],
     },
     {
       id: 2,
-      name: "Blusas",
+      name: 'Blusas',
       products: [
-        { id: "2-1", name: "Blusa de Algodão", image: "https://placehold.co/400x600/ADD8E6/000000?text=Blusa+de+Algodão" },
-        { id: "2-2", name: "Blusa de Seda", image: "https://placehold.co/400x600/87CEEB/000000?text=Blusa+de+Seda" },
-        { id: "2-3", name: "Blusa Social", image: "https://placehold.co/400x600/4682B4/FFFFFF?text=Blusa+Social" },
+        {
+          id: '2-1',
+          name: 'Blusa de Algodão',
+          image:
+            'https://placehold.co/400x600/ADD8E6/000000?text=Blusa+de+Algodão',
+        },
+        {
+          id: '2-2',
+          name: 'Blusa de Seda',
+          image:
+            'https://placehold.co/400x600/87CEEB/000000?text=Blusa+de+Seda',
+        },
+        {
+          id: '2-3',
+          name: 'Blusa Social',
+          image: 'https://placehold.co/400x600/4682B4/FFFFFF?text=Blusa+Social',
+        },
       ],
     },
     {
       id: 3,
-      name: "Calças",
+      name: 'Calças',
       products: [
-        { id: "3-1", name: "Calça Jeans", image: "https://placehold.co/400x600/90EE90/000000?text=Calça+Jeans" },
-        { id: "3-2", name: "Calça Legging", image: "https://placehold.co/400x600/32CD32/000000?text=Calça+Legging" },
-        { id: "3-3", name: "Calça Social", image: "https://placehold.co/400x600/228B22/FFFFFF?text=Calça+Social" },
+        {
+          id: '3-1',
+          name: 'Calça Jeans',
+          image: 'https://placehold.co/400x600/90EE90/000000?text=Calça+Jeans',
+        },
+        {
+          id: '3-2',
+          name: 'Calça Legging',
+          image:
+            'https://placehold.co/400x600/32CD32/000000?text=Calça+Legging',
+        },
+        {
+          id: '3-3',
+          name: 'Calça Social',
+          image: 'https://placehold.co/400x600/228B22/FFFFFF?text=Calça+Social',
+        },
       ],
     },
-  ];
+  ]
 
   const handleTabClick = (id) => {
-    setActiveTab(id); // Muda a aba ativa
-  };
+    setActiveTab(id)
+  }
 
   return (
     <div className="categories-tab">
@@ -45,7 +87,7 @@ const CategoriesTab = () => {
         {categories.map((category) => (
           <button
             key={category.id}
-            className={`tab-button ${activeTab === category.id ? "active" : ""}`}
+            className={`tab-button ${activeTab === category.id ? 'active' : ''}`}
             onClick={() => handleTabClick(category.id)}
           >
             {category.name}
@@ -56,7 +98,7 @@ const CategoriesTab = () => {
       {/* Produtos da aba ativa */}
       <div className="category-products">
         {categories
-          .filter((category) => category.id === activeTab) // Exibe apenas os produtos da aba ativa
+          .filter((category) => category.id === activeTab)
           .map((category) => (
             <div key={category.id} className="category-section">
               <h2 className="category-title">{category.name}</h2>
@@ -73,7 +115,7 @@ const CategoriesTab = () => {
           ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CategoriesTab;
+export default CategoriesTab

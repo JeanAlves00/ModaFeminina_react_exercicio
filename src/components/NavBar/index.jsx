@@ -1,20 +1,20 @@
-import { useState } from "react";
-import { FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
-import "./styles.css";
+import { useState } from 'react'
+import { FaShoppingCart, FaBars, FaTimes } from 'react-icons/fa'
+import './styles.css'
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   return (
     <header className="navbar">
       <div className="logo">
         <a href="/">Moda Feminina</a>
       </div>
-      <nav className={`nav-links ${isMenuOpen ? "open" : ""}`}>
+      <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
         <a href="#novidades" onClick={() => setIsMenuOpen(false)}>
           Novidades
         </a>
@@ -35,7 +35,7 @@ const Navbar = () => {
         {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
       </button>
     </header>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

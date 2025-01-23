@@ -1,34 +1,33 @@
 /* Hero Section */
 .hero {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    margin-top: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .hero .slide img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-  
-  /* Customização dos dots */
-  .slick-dots {
-    bottom: 10px;
-  }
-  
-  .slick-dots li button:before {
-    color: #fff;
-    font-size: 12px;
-  }
-  
-  .slick-dots li.slick-active button:before {
-    color: #ff69b4;
-  }
-  
-  /* Remover setas (opcional, já configurado no React) */
-  .slick-arrow {
-    display: none !important;
-  }
-  
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero .slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Customização dos dots */
+.slick-dots {
+  bottom: 10px;
+}
+
+.slick-dots li button:before {
+  color: #fff;
+  font-size: 12px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ff69b4;
+}
+
+/* Remover setas (opcional, já configurado no React) */
+.slick-arrow {
+  display: none !important;
+}

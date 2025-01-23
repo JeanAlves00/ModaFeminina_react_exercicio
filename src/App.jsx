@@ -5,10 +5,6 @@ import ProductMenu from './components/Products'
 import CategoriesTab from './components/CategoriesTab'
 import ContactTab from './components/Contact'
 
-
-
-
-
 const App = () => {
   return (
     <div>
@@ -18,7 +14,7 @@ const App = () => {
       <CategoriesTab />
       <ContactTab />
     </div>
-  );
-};
+  )
+}
 
 export default App
